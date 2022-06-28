@@ -9,4 +9,19 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Update="LogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Transfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Contact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+
 </Project>
