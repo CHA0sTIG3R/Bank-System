@@ -18,11 +18,17 @@ namespace Bank_System
         }
 
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Main ss = new Main();
-            ss.Show();
+            Main main = new Main();
+            main.ShowDialog();
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
