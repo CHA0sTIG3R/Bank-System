@@ -10,6 +10,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Update="Deposit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PayBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="LogIn.cs">
       <SubType>Form</SubType>
     </Compile>

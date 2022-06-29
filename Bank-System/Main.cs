@@ -34,12 +34,36 @@ namespace Bank_System
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Deposit deposit = new Deposit();
+            deposit.ShowDialog();
+            this.Close();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Transfer t = new Transfer();
+            t.ShowDialog();
+            this.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            PayBill payBill = new PayBill();
+            payBill.ShowDialog();
+            this.Close();
         }
     }
 }
