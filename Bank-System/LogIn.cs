@@ -16,19 +16,19 @@ namespace Bank_System
         public LogIn()
         {
             InitializeComponent();
+            textBox2.PasswordChar = '*';
         }
 
         DataTable mydt;
         SqlDataAdapter myadapter;
         SqlCommand mycommand;
         SqlConnection myconn;
-        SqlTransaction mytxn;
 
         private void button1_Click(object sender, EventArgs e)
         {
 
             myconn = new SqlConnection();
-            myconn.ConnectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=UserDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            myconn.ConnectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=User;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             myconn.Open();
 
             mycommand = new SqlCommand();
