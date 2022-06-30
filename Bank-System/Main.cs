@@ -12,57 +12,34 @@ namespace Bank_System
 {
     public partial class Main : Form
     {
-        public Main()
+        private String acctNo;
+        private String routNo;
+        private int balance;
+
+        public Main(String acct, String rout, int bal)
         {
+            acctNo = acct;
+            routNo = rout;
+            balance = bal;
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Deposit deposit = new Deposit();
-            deposit.ShowDialog();
-            this.Close();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
+            button5.Text = "$" + balance;
+            button14.Text = routNo;
+            button13.Text = acctNo;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Transfer t = new Transfer();
+            Transfer t = new Transfer(acctNo);
             t.ShowDialog();
             this.Close();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            PayBill payBill = new PayBill();
-            payBill.ShowDialog();
+            Deposit d = new Deposit(acctNo);
+            d.ShowDialog();
             this.Close();
         }
     }
